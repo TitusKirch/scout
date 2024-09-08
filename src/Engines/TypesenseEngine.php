@@ -247,7 +247,7 @@ class TypesenseEngine extends Engine
         $parameters = [
             'q' => $builder->query,
             'query_by' => config('scout.typesense.model-settings.'.get_class($builder->model).'.search-parameters.query_by') ?? '',
-            'infix' => config('scout.typesense.model-settings.'.get_class($builder->model).'.search-parameters.infix') ?? '',
+            'infix' => config('scout.typesense.model-settings.'.get_class($builder->model).'.search-parameters.infix') ?? null,
             'filter_by' => $this->filters($builder),
             'per_page' => $perPage,
             'page' => $page,
